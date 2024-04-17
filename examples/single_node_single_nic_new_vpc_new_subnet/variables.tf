@@ -58,7 +58,7 @@ variable "f5xc_ce_slo_subnet" {
 variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string
-  default     = "ingress_gateway"
+  default     = "ingress_egress_gateway"
 }
 
 variable "f5xc_cluster_latitude" {
@@ -86,6 +86,7 @@ variable "gcp_project_id" {
 variable "gcp_application_credentials" {
   description = "GCP account credentials"
   type        = string
+  default     = ""
 }
 
 variable "gcp_instance_type" {
@@ -99,21 +100,13 @@ variable "gcp_instance_disk_size" {
 }
 
 variable "gcp_region" {
-  type    = string
+  type = string
 }
 
 variable "gcp_zone" {
   type    = string
-  default = "us-east1-b"
 }
 
-variable "gcp_instance_image_base" {
-  type = object({
-    ingress_gateway        = string
-    ingress_egress_gateway = string
-  })
-  default = {
-    ingress_gateway        = "rhel9-20230922033926-single-voltmesh-us"
-    ingress_egress_gateway = "rhel9-20230922033926-multi-voltmesh-us"
-  }
+variable "gcp_instance_image" {
+  type = string
 }
