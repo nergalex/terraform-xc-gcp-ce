@@ -1,6 +1,6 @@
 ## Overview
 
-Terraform templates to create F5XC Azure cloud CE.
+Terraform templates to create F5XC GCP cloud CE (manual mode deployment).
 
 ## Requirements
 
