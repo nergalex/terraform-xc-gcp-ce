@@ -7,25 +7,27 @@ locals {
 }
 
 module "f5xc_gcp_cloud_ce_single_node_single_nic_new_vpc_new_subnet" {
-  source               = "../../modules/f5xc/ce/gcp"
-  owner                = var.owner
-  gcp_region           = var.gcp_region
-  is_sensitive         = false
-  ssh_username         = "centos"
-  has_public_ip        = true
-  ssh_public_key       = file(var.ssh_public_key_file)
-  status_check_type    = "cert"
-  instance_type        = var.gcp_instance_type
-  instance_image       = var.gcp_instance_image_base[var.f5xc_ce_gateway_type]
-  instance_disk_size   = var.gcp_instance_disk_size
-  f5xc_tenant          = var.f5xc_tenant
-  f5xc_api_url         = var.f5xc_api_url
-  f5xc_namespace       = var.f5xc_namespace
-  f5xc_api_token       = var.f5xc_api_token
-  f5xc_token_name      = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
-  f5xc_cluster_name    = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
-  f5xc_ce_slo_subnet   = var.f5xc_ce_slo_subnet
-  f5xc_ce_gateway_type = var.f5xc_ce_gateway_type
+  source                     = "../../modules/f5xc/ce/gcp"
+  owner                      = var.owner
+  gcp_region                 = var.gcp_region
+  is_sensitive               = false
+  ssh_username               = "centos"
+  has_public_ip              = true
+  ssh_public_key             = file(var.ssh_public_key_file)
+  status_check_type          = "cert"
+  instance_type              = var.gcp_instance_type
+  instance_image             = var.gcp_instance_image_base[var.f5xc_ce_gateway_type]
+  instance_disk_size         = var.gcp_instance_disk_size
+  f5xc_tenant                = var.f5xc_tenant
+  f5xc_api_url               = var.f5xc_api_url
+  f5xc_namespace             = var.f5xc_namespace
+  f5xc_api_token             = var.f5xc_api_token
+  f5xc_token_name            = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
+  f5xc_cluster_name          = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
+  f5xc_api_p12_file          = var.f5xc_api_p12_file
+  f5xc_ce_slo_subnet         = var.f5xc_ce_slo_subnet
+  f5xc_ce_gateway_type       = var.f5xc_ce_gateway_type
+  f5xc_api_p12_cert_password = var.f5xc_api_p12_cert_password
   f5xc_ce_nodes = {
     node0 = {
       az = format("%s-%s", var.gcp_region, var.gcp_zone)

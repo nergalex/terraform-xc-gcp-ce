@@ -7,6 +7,7 @@ Terraform templates to create F5XC GCP cloud CE (manual mode deployment).
 | Name                                                                                     | Version   |
 |------------------------------------------------------------------------------------------|-----------|
 | <a name="requirement_terraform"></a> [terraform](https://github.com/hashicorp/terraform) | \>= 1.3.0 |
+| <a name="requirement_gcloud"></a> [gcloud](https://cloud.google.com/cli?hl=en)           | latest    |
 | <a name="requirement_curl"></a> [curl](https://curl.se/)                                 | \>= 1.7   |
 | <a name="requirement_git"></a> [git](https://git-scm.com/)                               | \>= 8.0   |
 | <a name="requirement_jq"></a> [jq](https://jqlang.github.io/jq/)                         | latest    |
@@ -23,6 +24,7 @@ Terraform templates to create F5XC GCP cloud CE (manual mode deployment).
 
 - Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Terraform (https://developer.hashicorp.com/terraform/install?product_intent=terraform)
+- Google gcloud CLI (https://cloud.google.com/sdk/docs/install)
 - F5 XC Credentials (https://docs.cloud.f5.com/docs/how-to/user-mgmt/credentials)
     * API Certificate
 - SSH public key

@@ -5,9 +5,9 @@ provider "volterra" {
 }
 
 provider "google" {
-  credentials = file(var.gcp_application_credentials)
+  # credentials = file(var.gcp_application_credentials)
   project     = var.gcp_project_id
   region      = var.gcp_region
-  zone        = var.gcp_zone
+  zone        = format("%s-%s", var.gcp_region, var.gcp_zone)
   alias       = "default"
 }
