@@ -40,32 +40,17 @@ variable "f5xc_namespace" {
   default     = "system"
 }
 
-variable "f5xc_aws_region" {
-  description = "AWS region name"
-  type        = string
-}
-
-variable "f5xc_aws_availability_zone" {
-  description = "AWS availability zone name"
-  type        = string
-}
-
 variable "f5xc_cluster_name" {
   description = "F5 XC CE cluster name"
   type        = string
 }
 
 variable "owner" {
-  description = "AWS tag owner email address"
+  description = "GCP tag owner email address"
   type        = string
 }
 
-variable "aws_vpc_cidr_block" {
-  description = "AWS VPC CIDR block"
-  type        = string
-}
-
-variable "f5xc_ce_slo_subnet_node0" {
+variable "f5xc_ce_slo_subnet" {
   description = "F5 XC CE SLO interface subnet prefix"
   type        = string
 }
