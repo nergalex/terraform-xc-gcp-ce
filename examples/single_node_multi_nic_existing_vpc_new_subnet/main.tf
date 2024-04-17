@@ -38,11 +38,10 @@ module "vpc_sli" {
     }
   ]
   delete_default_internet_gateway_routes = true
-
 }
 
-
 module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_new_subnet" {
+  depends_on                 = [module.vpc_sli, module.vpc_slo]
   source                     = "../../modules/f5xc/ce/gcp"
   owner                      = var.owner
   gcp_region                 = var.gcp_region
@@ -80,11 +79,3 @@ module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_new_subnet" {
 output "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_new_subnet" {
   value = module.f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_new_subnet
 }
-
-/*output "create_network" {
-  value = module.f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_new_subnet.create_network
-}
-
-output "vpc_slo" {
-  value = module.vpc_slo
-}*/

@@ -117,9 +117,11 @@ variable "gcp_instance_image" {
 }
 
 variable "gcp_existing_network_slo" {
-  type = string
+  description = "existing gcp network name slo"
+  type        = string
 }
 
 variable "gcp_existing_network_sli" {
-  type = string
+  description = "existing gcp network name sli"
+  type        = string
 }

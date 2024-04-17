@@ -8,14 +8,13 @@ This example instantiates:
 - GCP compute instance
 - GCP compute subnetwork for SLO
 - GCP compute subnetwork for SLI
-- GCP compute network for SLO
-- GCP compute network for SLI
 - GCP compute firewall for SLO
 - GCP compute firewall for SLI
 - SLO interface with NAT IP
 
 # Usage
 
+- To deploy this example, GCP VPC for SLO and SLI interface are required in advance and in particular their names
 - Prepare GPC instance image
   * To be able to start a GCP VM instance, we need an instance image. This image must be saved in the Project Storage
   * Follow instructions at [F5 XC GCP Image Download](https://docs.cloud.f5.com/docs/images/node-cloud-images#gcp)  
