@@ -33,8 +33,8 @@ Terraform templates to create F5XC GCP cloud CE (manual mode deployment).
 
 ## Usage
 
-- Clone this repo with: `git clone --recurse-submodules https://github.com/f5devcentral/terraform-xc-aws-ce`
-- Enter repository directory with: `cd terraform-xc-aws-ce`
+- Clone this repo with: `git clone --recurse-submodules https://github.com/f5devcentral/terraform-xc-gcp-ce`
+- Enter repository directory with: `cd terraform-xc-gcp-ce`
 - Follow usage description in __topologies__ section
 - Multiple examples in example directory are available. Change to example directory that is to be deployed
   with `cd examples/<example_dir_name>`
@@ -57,7 +57,7 @@ Description of available input variables. Used input variables will change per t
 | f5xc_api_p12_file             | Path to F5 XC exported API cert file                                                                               |
 | f5xc_aws_availability_zone    | AWS availability zone to deploy object in                                                                          |
 |                               |                                                                                                                    |
-| aws_existing_vnet_id          | Id of existing AWS VNET e.g. VNET-089de438436174ab7                                                                |
+| aws_existing_vpc_id           | Id of existing AWS VNET e.g. VNET-089de438436174ab7                                                                |
 | aws_existing_sg_slo_ids       | SLO comma separated list of security group id strings e.g. ["id-1", "id-2", "id-3"]. Leave empty to omit injection |
 | aws_existing_sg_sli_ids       | SLI comma separated list of security group id strings e.g. ["id-1", "id-2", "id-3"]. Leave empty to omit injection |
 | aws_slo_subnet_id_node`X`     | Per node slo (outside interface) existing subnet id                                                                |
@@ -67,32 +67,32 @@ Description of available input variables. Used input variables will change per t
 
 ## Topologies
 
-| Name                                                                          | Description                                                                                        |
-|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| Single Node Single NIC new VNET / subnet                                      | [Description](examples/single_node_single_nic_new_vnet_new_subnet/README.md)                       |
-| Single Node Multi NIC new VNET / subnet                                       | [Description](examples/single_node_multi_nic_new_vnet_new_subnet/README.md)                        |
-| Single Node Single NIC Existing VNET / new subnet                             | [Description](examples/single_node_single_nic_existing_vnet_new_subnet/README.md)                  |
-| Single Node Multi NIC Existing VNET / new subnet                              | [Description](examples/single_node_multi_nic_existing_vnet_new_subnet/README.md)                   |
-| Single Node Single NIC existing VNET / subnet                                 | [Description](examples/single_node_single_nic_existing_vnet_existing_subnet/README.md)             |
-| Single Node Multi NIC existing VNET / subnet                                  | [Description](examples/single_node_mulit_nic_existing_vnet_existing_subnet/README.md)              |
-| Single Node Multi NIC existing VNET / new subnet with SLO no EIP / AWS NAT GW | [Description](examples/single_node_multi_nic_existing_vnet_and_subnet_nat_no_eip/README.md)        |
-| Single Node Single NIC existing VNET / subnet and 3rd party NAT GW            | [Description](examples/single_node_single_nic_existing_vnet_and_subnet_3rd_party_nat_gw/README.md) |
-| Single Node Multi NIC existing VNET / subnet and 3rd party NAT GW             | [Description](examples/single_node_multi_nic_existing_vnet_and_subnet_3rd_party_nat_gw/README.md)  |
-| Single Node Appstack Cluster new VNET / subnet                                | [Description](examples/single_node_cluster_appstack_new_vnet_new_subnet/README.md)                 |
-| Single Node Appstack Cluster existing VNET / new subnet                       | [Description](examples/single_node_cluster_appstack_existing_vnet_new_subnet/README.md)            |
-| Three Node Cluster Single NIC new VNET / subnet                               | [Description](examples/three_node_cluster_single_nic_new_vnet_new_subnet/README.md)                |
-| Three Node Cluster Single NIC existing VNET / new subnet                      | [Description](examples/three_node_cluster_single_nic_existing_vnet_new_subnet/README.md)           |
-| Three Node Cluster Single NIC existing VNET / subnet                          | [Description](examples/three_node_cluster_single_nic_existing_vnet_existing_subnet/README.md)      |
-| Three Node Cluster Multi NIC new VNET / subnet                                | [Description](examples/three_node_cluster_multi_nic_new_vnet_new_subnet/README.md)                 |
-| Three Node Cluster Multi NIC existing VNET / new subnet                       | [Description](examples/three_node_cluster_multi_nic_existing_vnet_new_subnet/README.md)            |
-| Three Node Appstack Cluster new VNET / subnet                                 | [Description](examples/three_node_cluster_appstack_new_vnet_new_subnet/README.md)                  |
-| Three Node Appstack Cluster existing VNET / new subnet                        | [Description](examples/three_node_cluster_appstack_existing_vnet_new_subnet/README.md)             |
+| Name                                                                          | Description                                                                                       |
+|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Single Node Single NIC new VNET / subnet                                      | [Description](examples/single_node_single_nic_new_vpc_new_subnet/README.md)                       |
+| Single Node Multi NIC new VNET / subnet                                       | [Description](examples/single_node_multi_nic_new_vpc_new_subnet/README.md)                        |
+| Single Node Single NIC Existing VNET / new subnet                             | [Description](examples/single_node_single_nic_existing_vpc_new_subnet/README.md)                  |
+| Single Node Multi NIC Existing VNET / new subnet                              | [Description](examples/single_node_multi_nic_existing_vpc_new_subnet/README.md)                   |
+| Single Node Single NIC existing VNET / subnet                                 | [Description](examples/single_node_single_nic_existing_vpc_existing_subnet/README.md)             |
+| Single Node Multi NIC existing VNET / subnet                                  | [Description](examples/single_node_mulit_nic_existing_vpc_existing_subnet/README.md)              |
+| Single Node Multi NIC existing VNET / new subnet with SLO no EIP / AWS NAT GW | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_nat_no_eip/README.md)        |
+| Single Node Single NIC existing VNET / subnet and 3rd party NAT GW            | [Description](examples/single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md) |
+| Single Node Multi NIC existing VNET / subnet and 3rd party NAT GW             | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md)  |
+| Single Node Appstack Cluster new VNET / subnet                                | [Description](examples/single_node_cluster_appstack_new_vpc_new_subnet/README.md)                 |
+| Single Node Appstack Cluster existing VNET / new subnet                       | [Description](examples/single_node_cluster_appstack_existing_vpc_new_subnet/README.md)            |
+| Three Node Cluster Single NIC new VNET / subnet                               | [Description](examples/three_node_cluster_single_nic_new_vpc_new_subnet/README.md)                |
+| Three Node Cluster Single NIC existing VNET / new subnet                      | [Description](examples/three_node_cluster_single_nic_existing_vpc_new_subnet/README.md)           |
+| Three Node Cluster Single NIC existing VNET / subnet                          | [Description](examples/three_node_cluster_single_nic_existing_vpc_existing_subnet/README.md)      |
+| Three Node Cluster Multi NIC new VNET / subnet                                | [Description](examples/three_node_cluster_multi_nic_new_vpc_new_subnet/README.md)                 |
+| Three Node Cluster Multi NIC existing VNET / new subnet                       | [Description](examples/three_node_cluster_multi_nic_existing_vpc_new_subnet/README.md)            |
+| Three Node Appstack Cluster new VNET / subnet                                 | [Description](examples/three_node_cluster_appstack_new_vpc_new_subnet/README.md)                  |
+| Three Node Appstack Cluster existing VNET / new subnet                        | [Description](examples/three_node_cluster_appstack_existing_vpc_new_subnet/README.md)             |
 
 ## Feature specific examples
 
-| Name                                                                            | Description                                                                                |
-|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| Single Node with offline survivability mode and l3 performance enhancement mode | [Description](examples/single_node_single_nic_new_vnet_new_subnet_jframe_l7_osm/README.md) |
+| Name                                                                            | Description                                                                               |
+|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Single Node with offline survivability mode and l3 performance enhancement mode | [Description](examples/single_node_single_nic_new_vpc_new_subnet_jframe_l7_osm/README.md) |
 
 ## ClickOps
 
