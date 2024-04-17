@@ -65,7 +65,7 @@ variable "aws_vpc_cidr_block" {
   type        = string
 }
 
-variable "f5xc_aws_vpc_slo_subnet_node0" {
+variable "f5xc_ce_slo_subnet_node0" {
   description = "F5 XC CE SLO interface subnet prefix"
   type        = string
 }
@@ -91,4 +91,44 @@ variable "f5xc_cluster_longitude" {
 variable "ssh_public_key_file" {
   description = "path to ssh public key file"
   type        = string
+}
+
+variable "gcp_project_id" {
+  description = "GCP account project id"
+  type        = string
+}
+
+variable "gcp_application_credentials" {
+  description = "GCP account credentials"
+  type        = string
+}
+
+variable "gcp_instance_type" {
+  type    = string
+  default = "n1-standard-4"
+}
+
+variable "gcp_instance_disk_size" {
+  type    = string
+  default = "40"
+}
+
+variable "gcp_region" {
+  type    = string
+}
+
+variable "gcp_zone" {
+  type    = string
+  default = "us-east1-b"
+}
+
+variable "gcp_instance_image_base" {
+  type = object({
+    ingress_gateway        = string
+    ingress_egress_gateway = string
+  })
+  default = {
+    ingress_gateway        = "rhel9-20230922033926-single-voltmesh-us"
+    ingress_egress_gateway = "rhel9-20230922033926-multi-voltmesh-us"
+  }
 }
