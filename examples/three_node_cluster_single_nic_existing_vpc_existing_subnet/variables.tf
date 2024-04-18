@@ -50,11 +50,6 @@ variable "owner" {
   type        = string
 }
 
-variable "f5xc_ce_slo_subnet" {
-  description = "F5 XC CE SLO interface subnet prefix"
-  type        = string
-}
-
 variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string
@@ -121,5 +116,10 @@ variable "gcp_instance_image" {
 
 variable "gcp_existing_network_slo" {
   description = "existing gcp network name slo"
+  type        = string
+}
+
+variable "gcp_existing_subnet_network_slo" {
+  description = "existing gcp subnetwork name slo"
   type        = string
 }

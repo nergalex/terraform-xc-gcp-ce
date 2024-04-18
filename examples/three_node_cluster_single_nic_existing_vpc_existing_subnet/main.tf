@@ -45,7 +45,6 @@ module "f5xc_gcp_cloud_ce_three_node_single_nic_existing_vpc_existing_subnet" {
   f5xc_token_name                 = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
   f5xc_cluster_name               = format("%s-%s-%s", var.project_prefix, var.f5xc_cluster_name, var.project_suffix)
   f5xc_api_p12_file               = var.f5xc_api_p12_file
-  f5xc_ce_slo_subnet              = var.f5xc_ce_slo_subnet
   f5xc_ce_gateway_type            = var.f5xc_ce_gateway_type
   f5xc_api_p12_cert_password      = var.f5xc_api_p12_cert_password
   f5xc_ce_nodes = {

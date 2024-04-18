@@ -13,6 +13,12 @@ variable "f5xc_api_p12_file" {
   type        = string
 }
 
+variable "f5xc_api_p12_cert_password" {
+  description = "F5 XC API certificate file password"
+  type        = string
+  default     = ""
+}
+
 variable "f5xc_api_url" {
   description = "F5 XC API URL"
   type        = string
@@ -21,7 +27,6 @@ variable "f5xc_api_url" {
 variable "f5xc_api_token" {
   description = "F5 XC API token"
   type        = string
-  default     = ""
 }
 
 variable "f5xc_tenant" {
@@ -35,65 +40,30 @@ variable "f5xc_namespace" {
   default     = "system"
 }
 
-variable "f5xc_aws_region" {
-  description = "AWS region name"
-  type        = string
-}
-
-variable "f5xc_aws_availability_zone" {
-  description = "AWS availability zone name"
-  type        = string
-}
-
 variable "f5xc_cluster_name" {
   description = "F5 XC CE cluster name"
   type        = string
 }
 
 variable "owner" {
-  description = "AWS tag owner email address"
+  description = "GCP tag owner email address"
   type        = string
 }
 
-variable "aws_existing_vpc_id" {
-  description = "The ID of an already existing AWS VPC"
+variable "f5xc_ce_slo_subnet" {
+  description = "F5 XC CE SLO interface subnet prefix"
   type        = string
 }
 
-variable "aws_slo_subnet_id_node0" {
-  description = "already existing aws slo subnet id"
-  type        = string
-}
-
-variable "aws_sli_subnet_id_node0" {
-  description = "already existing aws sli subnet id"
-  type        = string
-}
-
-variable "aws_existing_sg_slo_ids" {
-  description = "Inject existing list of AWS SG IDs for SLO"
-  type        = list(string)
-}
-
-variable "aws_existing_sg_sli_ids" {
-  description = "Inject existing list of AWS SG IDs for SLI"
-  type        = list(string)
-}
-
-variable "aws_existing_key_pair_id" {
-  description = "Inject existing AWS key pair object id"
-  type        = string
-}
-
-variable "aws_existing_iam_profile_name" {
-  description = "The name of existing AWS IAM profile"
+variable "f5xc_ce_sli_subnet" {
+  description = "F5 XC CE SLI interface subnet prefix"
   type        = string
 }
 
 variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string
-  default     = "ingress_gateway"
+  default     = "ingress_egress_gateway"
 }
 
 variable "f5xc_cluster_latitude" {
@@ -108,12 +78,60 @@ variable "f5xc_cluster_longitude" {
   default     = 40.730610
 }
 
-variable "f5xc_api_p12_cert_password" {
-  description = "F5 XC API certificate file password"
+variable "ssh_public_key_file" {
+  description = "path to ssh public key file"
   type        = string
 }
 
-variable "ssh_public_key_file" {
-  description = "path to ssh public key file"
+variable "gcp_project_id" {
+  description = "GCP account project id"
+  type        = string
+}
+
+variable "gcp_application_credentials" {
+  description = "GCP account credentials"
+  type        = string
+  default     = ""
+}
+
+variable "gcp_instance_type" {
+  type    = string
+  default = "n1-standard-4"
+}
+
+variable "gcp_instance_disk_size" {
+  type    = string
+  default = "40"
+}
+
+variable "gcp_region" {
+  type = string
+}
+
+variable "gcp_zone" {
+  type = string
+}
+
+variable "gcp_instance_image" {
+  type = string
+}
+
+variable "gcp_existing_network_slo" {
+  description = "existing gcp network name slo"
+  type        = string
+}
+
+variable "gcp_existing_network_sli" {
+  description = "existing gcp network name sli"
+  type        = string
+}
+
+variable "gcp_existing_subnet_network_slo" {
+  description = "existing gcp subnetwork name slo"
+  type        = string
+}
+
+variable "gcp_existing_subnet_network_sli" {
+  description = "existing gcp subnetwork name sli"
   type        = string
 }
