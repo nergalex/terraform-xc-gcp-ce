@@ -44,11 +44,11 @@ module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_nat_no_e
   depends_on                      = [module.vpc_sli, module.vpc_slo]
   source                          = "../../modules/f5xc/ce/gcp"
   owner                           = var.owner
-  gcp_region                      = var.gcp_region
   is_sensitive                    = false
   has_public_ip                   = false
   ssh_public_key                  = file(var.ssh_public_key_file)
   status_check_type               = "cert"
+  gcp_region                      = var.gcp_region
   gcp_project_id                  = var.gcp_project_id
   gcp_instance_type               = var.gcp_instance_type
   gcp_instance_image              = var.gcp_instance_image

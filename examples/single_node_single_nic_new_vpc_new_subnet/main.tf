@@ -9,14 +9,15 @@ locals {
 module "f5xc_gcp_cloud_ce_single_node_single_nic_new_vpc_new_subnet" {
   source                     = "../../modules/f5xc/ce/gcp"
   owner                      = var.owner
-  gcp_region                 = var.gcp_region
   is_sensitive               = false
   has_public_ip              = true
   ssh_public_key             = file(var.ssh_public_key_file)
   status_check_type          = "cert"
-  instance_type              = var.gcp_instance_type
-  instance_image             = var.gcp_instance_image
-  instance_disk_size         = var.gcp_instance_disk_size
+  gcp_region                 = var.gcp_region
+  gcp_project_id             = var.gcp_project_id
+  gcp_instance_type          = var.gcp_instance_type
+  gcp_instance_image         = var.gcp_instance_image
+  gcp_instance_disk_size     = var.gcp_instance_disk_size
   f5xc_tenant                = var.f5xc_tenant
   f5xc_api_url               = var.f5xc_api_url
   f5xc_namespace             = var.f5xc_namespace
