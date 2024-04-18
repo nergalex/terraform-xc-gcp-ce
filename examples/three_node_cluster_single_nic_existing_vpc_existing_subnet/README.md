@@ -6,7 +6,6 @@ This example instantiates:
 - GCP compute instance template
 - GCP compute region instance group manager
 - GCP compute instance
-- GCP compute subnetwork for SLO
 - GCP compute firewall for SLO
 - SLO interface with NAT IP
 
