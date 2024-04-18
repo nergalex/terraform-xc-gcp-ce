@@ -69,7 +69,6 @@ Description of available input variables. Used input variables will change per t
 | gcp_existing_subnet_network_slo | GCP existing subnetwork name for SLO                                                                           |
 | gcp_existing_subnet_network_sli | GCP existing subnetwork name for SLI                                                                           |
 
-
 ## Topologies
 
 | Name                                                                         | Description                                                                                       |
