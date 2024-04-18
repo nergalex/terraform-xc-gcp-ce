@@ -18,7 +18,7 @@ This example instantiates:
 - Prepare GPC instance image
   * To be able to start a GCP VM instance, we need an instance image. This image must be saved in the Project Storage
   * Follow instructions at [F5 XC GCP Image Download](https://docs.cloud.f5.com/docs/images/node-cloud-images#gcp)  
-  * Example: gcloud compute images create rhel9-20240216075746-multi-voltmesh-us --guest-os-features="MULTI_IP_SUBNET" --source-uri gs://ves-images/rhel9-20240216075746-multi-voltmesh.tar.gz
+  * Example: gcloud compute images create rhel9-20240216075746-multi-voltmesh-us --family rhel9 --source-uri --guest-os-features="MULTI_IP_SUBNET" gs://ves-images/rhel9-20240216075746-multi-voltmesh.tar.gz
   * Name of the created image will later on be used as input variable for Terraform
 - Authentication can be done in different ways as outlined here: [Google Provider Authentication](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference#authentication)
 - In this example we use gcloud command to authenticate. Run `gcloud auth application-default login`
