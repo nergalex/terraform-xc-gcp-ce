@@ -45,27 +45,30 @@ Terraform templates to create F5XC GCP cloud CE (manual mode deployment).
 
 Description of available input variables. Used input variables will change per topology example:
 
-| Name                          | Description                                                                                                        |
-|-------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| owner                         | Tag gcp objects with creator / owner email address                                                                 |
-| project_prefix                | String added at the beginning of various GCP / F5 XC object identifier. `<project_prefix>_<object>`                |
-| project_suffix                | String added at the end of various GCP / F5 XC object identifier. `<project_prefix>_<object>_<project_suffix>`     |
-|                               | Example prefix + suffix for F5XC site name `project_prefix_cluster_name_project_suffix`                            |
-|                               |                                                                                                                    |
-| f5xc_tenant                   | Full f5 xc tenant name e.g. playground-abcdefg                                                                     |
-| f5xc_api_url                  | F5 XC API URL e.g. https://https://playground.console.ves.volterra.io/api                                          |
-| f5xc_aws_region               | GCP region to deploy site in e.g. "us-west-2"                                                                      |
-| f5xc_cluster_name             | F5 XC cluster name e.g. "gcp-ce-test"                                                                              |
-| f5xc_api_p12_file             | Path to F5 XC exported API cert file                                                                               |
-| f5xc_aws_availability_zone    | AWS availability zone to deploy object in                                                                          |
-|                               |                                                                                                                    |
-| aws_existing_vpc_id           | Id of existing GCP VPC e.g. VPC-089de438436174ab7                                                                  |
-| aws_existing_sg_slo_ids       | SLO comma separated list of security group id strings e.g. ["id-1", "id-2", "id-3"]. Leave empty to omit injection |
-| aws_existing_sg_sli_ids       | SLI comma separated list of security group id strings e.g. ["id-1", "id-2", "id-3"]. Leave empty to omit injection |
-| aws_slo_subnet_id_node`X`     | Per node slo (outside interface) existing subnet id                                                                |
-| aws_sli_subnet_id_node`X`     | Per node sli (inside interface) existing subnet id                                                                 |
-| aws_existing_key_pair_id      | Inject existing ssh key pair `id`                                                                                  |
-| aws_existing_iam_profile_name | Inject existing iam profile `name`                                                                                 |
+| Name                            | Description                                                                                                    |
+|---------------------------------|----------------------------------------------------------------------------------------------------------------|
+| owner                           | Tag gcp objects with creator / owner email address                                                             |
+| project_prefix                  | String added at the beginning of various GCP / F5 XC object identifier. `<project_prefix>_<object>`            |
+| project_suffix                  | String added at the end of various GCP / F5 XC object identifier. `<project_prefix>_<object>_<project_suffix>` |
+|                                 | Example prefix + suffix for F5XC site name `project_prefix_cluster_name_project_suffix`                        |
+|                                 |                                                                                                                |
+| f5xc_tenant                     | Full f5 xc tenant name e.g. playground-abcdefg                                                                 |
+| f5xc_api_url                    | F5 XC API URL e.g. https://https://playground.console.ves.volterra.io/api                                      |
+| f5xc_cluster_name               | F5 XC cluster name e.g. "gcp-ce-test"                                                                          |
+| f5xc_api_p12_file               | Path to F5 XC exported API cert file                                                                           |
+| f5xc_ce_slo_subnet              | SLO subnet CIDR e.g. "192.168.0.0/24"                                                                          |
+| f5xc_ce_sli_subnet              | SLI subnet CIDR e.g. "192.168.100.0/26"                                                                        |
+|                                 |                                                                                                                |
+| gcp_region                      | GCP region to deploy site at                                                                                   |
+| gcp_zone_node0                  | GCP zone for cluster node0                                                                                     |
+| gcp_zone_node1                  | GCP zone for cluster node1                                                                                     |
+| gcp_zone_node2                  | GCP zone for cluster node2                                                                                     |
+| gcp_instance_image              | GCP instance image to use e.g. rhel9-20240216075746-voltstack-combo-us                                         |
+| gcp_existing_network_slo        | GCP existing network name for SLO                                                                              |
+| gcp_existing_network_sli        | GCP existing network name for SLI                                                                              |
+| gcp_existing_subnet_network_slo | GCP existing subnetwork name for SLO                                                                           |
+| gcp_existing_subnet_network_sli | GCP existing subnetwork name for SLI                                                                           |
+
 
 ## Topologies
 
