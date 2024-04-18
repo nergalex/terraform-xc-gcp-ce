@@ -50,16 +50,6 @@ variable "owner" {
   type        = string
 }
 
-variable "f5xc_ce_slo_subnet" {
-  description = "F5 XC CE SLO interface subnet prefix"
-  type        = string
-}
-
-variable "f5xc_ce_sli_subnet" {
-  description = "F5 XC CE SLI interface subnet prefix"
-  type        = string
-}
-
 variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string

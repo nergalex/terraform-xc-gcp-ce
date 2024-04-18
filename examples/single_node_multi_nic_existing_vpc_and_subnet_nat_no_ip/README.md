@@ -8,7 +8,10 @@ This example instantiates:
 - GCP compute instance
 - GCP compute firewall for SLO
 - GCP compute firewall for SLI
-- SLO interface with NAT IP
+- GCP compute router
+- GCP compute router nat
+- GCP compute address
+- SLO interface with private IP only
 
 # Usage
 

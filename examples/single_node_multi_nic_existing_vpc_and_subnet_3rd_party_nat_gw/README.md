@@ -8,6 +8,7 @@ This example instantiates:
 - GCP compute instance
 - GCP compute firewall for SLO
 - GCP compute firewall for SLI
+- SLO interface with private IP only
 
 # Usage
 

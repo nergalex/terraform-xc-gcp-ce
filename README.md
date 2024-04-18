@@ -69,26 +69,26 @@ Description of available input variables. Used input variables will change per t
 
 ## Topologies
 
-| Name                                                                          | Description                                                                                       |
-|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Single Node Single NIC new VNET / subnet                                      | [Description](examples/single_node_single_nic_new_vpc_new_subnet/README.md)                       |
-| Single Node Multi NIC new VNET / subnet                                       | [Description](examples/single_node_multi_nic_new_vpc_new_subnet/README.md)                        |
-| Single Node Single NIC Existing VNET / new subnet                             | [Description](examples/single_node_single_nic_existing_vpc_new_subnet/README.md)                  |
-| Single Node Multi NIC Existing VNET / new subnet                              | [Description](examples/single_node_multi_nic_existing_vpc_new_subnet/README.md)                   |
-| Single Node Single NIC existing VNET / subnet                                 | [Description](examples/single_node_single_nic_existing_vpc_existing_subnet/README.md)             |
-| Single Node Multi NIC existing VNET / subnet                                  | [Description](examples/single_node_multi_nic_existing_vpc_existing_subnet/README.md)              |
-| Single Node Multi NIC existing VNET / new subnet with SLO no EIP / AWS NAT GW | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_nat_no_eip/README.md)        |
-| Single Node Single NIC existing VNET / subnet and 3rd party NAT GW            | [Description](examples/single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md) |
-| Single Node Multi NIC existing VNET / subnet and 3rd party NAT GW             | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md)  |
-| Single Node Appstack Cluster new VNET / subnet                                | [Description](examples/single_node_cluster_appstack_new_vpc_new_subnet/README.md)                 |
-| Single Node Appstack Cluster existing VNET / new subnet                       | [Description](examples/single_node_cluster_appstack_existing_vpc_new_subnet/README.md)            |
-| Three Node Cluster Single NIC new VNET / subnet                               | [Description](examples/three_node_cluster_single_nic_new_vpc_new_subnet/README.md)                |
-| Three Node Cluster Single NIC existing VNET / new subnet                      | [Description](examples/three_node_cluster_single_nic_existing_vpc_new_subnet/README.md)           |
-| Three Node Cluster Single NIC existing VNET / subnet                          | [Description](examples/three_node_cluster_single_nic_existing_vpc_existing_subnet/README.md)      |
-| Three Node Cluster Multi NIC new VNET / subnet                                | [Description](examples/three_node_cluster_multi_nic_new_vpc_new_subnet/README.md)                 |
-| Three Node Cluster Multi NIC existing VNET / new subnet                       | [Description](examples/three_node_cluster_multi_nic_existing_vpc_new_subnet/README.md)            |
-| Three Node Appstack Cluster new VNET / subnet                                 | [Description](examples/three_node_cluster_appstack_new_vpc_new_subnet/README.md)                  |
-| Three Node Appstack Cluster existing VNET / new subnet                        | [Description](examples/three_node_cluster_appstack_existing_vpc_new_subnet/README.md)             |
+| Name                                                                         | Description                                                                                       |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Single Node Single NIC new VNET / subnet                                     | [Description](examples/single_node_single_nic_new_vpc_new_subnet/README.md)                       |
+| Single Node Multi NIC new VNET / subnet                                      | [Description](examples/single_node_multi_nic_new_vpc_new_subnet/README.md)                        |
+| Single Node Single NIC Existing VNET / new subnet                            | [Description](examples/single_node_single_nic_existing_vpc_new_subnet/README.md)                  |
+| Single Node Multi NIC Existing VNET / new subnet                             | [Description](examples/single_node_multi_nic_existing_vpc_new_subnet/README.md)                   |
+| Single Node Single NIC existing VNET / subnet                                | [Description](examples/single_node_single_nic_existing_vpc_existing_subnet/README.md)             |
+| Single Node Multi NIC existing VNET / subnet                                 | [Description](examples/single_node_multi_nic_existing_vpc_existing_subnet/README.md)              |
+| Single Node Multi NIC existing VNET / new subnet with SLO no IP / GCP NAT RT | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_nat_no_ip/README.md)         |
+| Single Node Single NIC existing VNET / subnet and 3rd party NAT GW           | [Description](examples/single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md) |
+| Single Node Multi NIC existing VNET / subnet and 3rd party NAT GW            | [Description](examples/single_node_multi_nic_existing_vpc_and_subnet_3rd_party_nat_gw/README.md)  |
+| Single Node AppStack Cluster new VNET / subnet                               | [Description](examples/single_node_cluster_appstack_new_vpc_new_subnet/README.md)                 |
+| Single Node AppStack Cluster existing VNET / new subnet                      | [Description](examples/single_node_cluster_appstack_existing_vpc_new_subnet/README.md)            |
+| Three Node Cluster Single NIC new VNET / subnet                              | [Description](examples/three_node_cluster_single_nic_new_vpc_new_subnet/README.md)                |
+| Three Node Cluster Single NIC existing VNET / new subnet                     | [Description](examples/three_node_cluster_single_nic_existing_vpc_new_subnet/README.md)           |
+| Three Node Cluster Single NIC existing VNET / subnet                         | [Description](examples/three_node_cluster_single_nic_existing_vpc_existing_subnet/README.md)      |
+| Three Node Cluster Multi NIC new VNET / subnet                               | [Description](examples/three_node_cluster_multi_nic_new_vpc_new_subnet/README.md)                 |
+| Three Node Cluster Multi NIC existing VNET / new subnet                      | [Description](examples/three_node_cluster_multi_nic_existing_vpc_new_subnet/README.md)            |
+| Three Node AppStack Cluster new VNET / subnet                                | [Description](examples/three_node_cluster_appstack_new_vpc_new_subnet/README.md)                  |
+| Three Node AppStack Cluster existing VNET / new subnet                       | [Description](examples/three_node_cluster_appstack_existing_vpc_new_subnet/README.md)             |
 
 ## Feature specific examples
 
