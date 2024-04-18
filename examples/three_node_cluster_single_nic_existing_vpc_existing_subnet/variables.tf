@@ -13,6 +13,12 @@ variable "f5xc_api_p12_file" {
   type        = string
 }
 
+variable "f5xc_api_p12_cert_password" {
+  description = "F5 XC API certificate file password"
+  type        = string
+  default     = ""
+}
+
 variable "f5xc_api_url" {
   description = "F5 XC API URL"
   type        = string
@@ -34,48 +40,18 @@ variable "f5xc_namespace" {
   default     = "system"
 }
 
-variable "f5xc_aws_region" {
-  description = "AWS region name"
-  type        = string
-}
-
-variable "f5xc_aws_availability_zone_node0" {
-  description = "AWS availability zone name node0"
-  type        = string
-}
-
-variable "f5xc_aws_availability_zone_node1" {
-  description = "AWS availability zone name node1"
-  type        = string
-}
-
-variable "f5xc_aws_availability_zone_node2" {
-  description = "AWS availability zone name node2"
-  type        = string
-}
-
 variable "f5xc_cluster_name" {
   description = "F5 XC CE cluster name"
   type        = string
 }
 
 variable "owner" {
-  description = "AWS tag owner email address"
+  description = "GCP tag owner email address"
   type        = string
 }
 
-variable "aws_slo_subnet_id_node0" {
-  description = "F5 XC CE node0 SLO interface subnet id"
-  type        = string
-}
-
-variable "aws_slo_subnet_id_node1" {
-  description = "F5 XC CE node1 SLO interface subnet id"
-  type        = string
-}
-
-variable "aws_slo_subnet_id_node2" {
-  description = "F5 XC CE node2 SLO interface subnet id"
+variable "f5xc_ce_slo_subnet" {
+  description = "F5 XC CE SLO interface subnet prefix"
   type        = string
 }
 
@@ -83,17 +59,6 @@ variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string
   default     = "ingress_gateway"
-}
-
-variable "f5xc_api_p12_cert_password" {
-  description = "F5 XC API certificate file password"
-  type        = string
-  default     = ""
-}
-
-variable "aws_existing_vpc_id" {
-  description = "The ID of an already existing AWS VPC"
-  type        = string
 }
 
 variable "f5xc_cluster_latitude" {
@@ -110,5 +75,51 @@ variable "f5xc_cluster_longitude" {
 
 variable "ssh_public_key_file" {
   description = "path to ssh public key file"
+  type        = string
+}
+
+variable "gcp_project_id" {
+  description = "GCP account project id"
+  type        = string
+}
+
+variable "gcp_application_credentials" {
+  description = "GCP account credentials"
+  type        = string
+  default     = ""
+}
+
+variable "gcp_instance_type" {
+  type    = string
+  default = "n1-standard-4"
+}
+
+variable "gcp_instance_disk_size" {
+  type    = string
+  default = "40"
+}
+
+variable "gcp_region" {
+  type = string
+}
+
+variable "gcp_zone_node0" {
+  type = string
+}
+
+variable "gcp_zone_node1" {
+  type = string
+}
+
+variable "gcp_zone_node2" {
+  type = string
+}
+
+variable "gcp_instance_image" {
+  type = string
+}
+
+variable "gcp_existing_network_slo" {
+  description = "existing gcp network name slo"
   type        = string
 }
