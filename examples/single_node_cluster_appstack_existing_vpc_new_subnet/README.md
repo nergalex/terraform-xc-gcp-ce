@@ -7,13 +7,12 @@ This example instantiates:
 - GCP compute region instance group manager
 - GCP compute instance
 - GCP compute subnetwork for SLO
-- GCP compute subnetwork for SLI
 - GCP compute firewall for SLO
-- GCP compute firewall for SLI
 - SLO interface with NAT IP
 
 # Usage
 
+- api token needed
 - To deploy this example, GCP VPC for SLO interface is required in advance and in particular its name
 - Prepare GPC instance image
   * To be able to start a GCP VM instance, we need an instance image. This image must be saved in the Project Storage
@@ -30,4 +29,3 @@ This example instantiates:
 - Copy F5XC API certificate file obtained in installation step into example directory
 - Initialize with: `terraform init`, optionally run `terraform plan`
 - Apply with: `terraform apply -auto-approve` or destroy with: `terraform destroy -auto-approve`
-gcloud compute images create rhel9-20240216075746-voltstack-combo-us --family rhel9 --source-uri gs://ves-images/rhel9-20240216075746-voltstack-combo.tar.gz
