@@ -53,7 +53,7 @@ variable "owner" {
 variable "f5xc_ce_gateway_type" {
   description = "F5 XC CE gateway type"
   type        = string
-  default     = "ingress_egress_gateway"
+  default     = "voltstack_gateway"
 }
 
 variable "f5xc_cluster_latitude" {
@@ -66,6 +66,11 @@ variable "f5xc_cluster_longitude" {
   description = "F5 XC CE geo longitude"
   type        = number
   default     = 40.730610
+}
+
+variable "f5xc_ce_slo_subnet" {
+  description = "F5 XC CE SLO interface subnet prefix"
+  type        = string
 }
 
 variable "ssh_public_key_file" {
