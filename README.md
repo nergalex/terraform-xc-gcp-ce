@@ -82,7 +82,7 @@ Description of available input variables. Used input variables will change per t
 
 | Name                                                                        | Description                                                                                       |
 |-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Single Node Single NIC new VNET / subnet                                    | [Description](examples/single_node_single_nic_new_vpc_new_subnet/README.md)                       |
+| Single Node Single NIC new VPC / subnet                                     | [Description](examples/single_node_single_nic_new_vpc_new_subnet/README.md)                       |
 | Single Node Multi NIC new VPC / subnet                                      | [Description](examples/single_node_multi_nic_new_vpc_new_subnet/README.md)                        |
 | Single Node Single NIC Existing VPC / new subnet                            | [Description](examples/single_node_single_nic_existing_vpc_new_subnet/README.md)                  |
 | Single Node Multi NIC Existing VPC / new subnet                             | [Description](examples/single_node_multi_nic_existing_vpc_new_subnet/README.md)                   |
