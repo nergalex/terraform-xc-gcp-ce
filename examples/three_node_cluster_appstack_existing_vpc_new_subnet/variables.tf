@@ -68,6 +68,11 @@ variable "f5xc_cluster_longitude" {
   default     = 40.730610
 }
 
+variable "f5xc_ce_slo_subnet" {
+  description = "F5 XC CE SLO interface subnet prefix"
+  type        = string
+}
+
 variable "ssh_public_key_file" {
   description = "path to ssh public key file"
   type        = string
@@ -106,6 +111,10 @@ variable "gcp_zone_master_node1" {
   type = string
 }
 
+variable "gcp_zone_master_node2" {
+  type = string
+}
+
 variable "gcp_zone_worker_node0" {
   type = string
 }
@@ -118,10 +127,11 @@ variable "gcp_zone_worker_node2" {
   type = string
 }
 
-variable "gcp_zone_master_node2" {
+variable "gcp_instance_image" {
   type = string
 }
 
-variable "gcp_instance_image" {
-  type = string
+variable "gcp_existing_network_slo" {
+  description = "existing gcp network name slo"
+  type        = string
 }

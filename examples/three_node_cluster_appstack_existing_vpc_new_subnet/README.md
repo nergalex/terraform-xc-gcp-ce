@@ -17,8 +17,7 @@ This example instantiates:
 
 # Usage
 
-- needs api token
-- To deploy this example, GCP VPC for SLO interface is required in advance and in particular its name
+- To deploy this example, GCP VPC and Subnet for SLO interface is required in advance and in particular their names
 - Prepare GPC instance image
   * To be able to start a GCP VM instance, we need an instance image. This image must be saved in the Project Storage
   * Follow instructions at [F5 XC GCP Image Download](https://docs.cloud.f5.com/docs/images/node-cloud-images#gcp)  

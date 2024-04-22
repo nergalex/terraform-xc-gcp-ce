@@ -111,6 +111,10 @@ variable "gcp_zone_master_node1" {
   type = string
 }
 
+variable "gcp_zone_master_node2" {
+  type = string
+}
+
 variable "gcp_zone_worker_node0" {
   type = string
 }
@@ -120,10 +124,6 @@ variable "gcp_zone_worker_node1" {
 }
 
 variable "gcp_zone_worker_node2" {
-  type = string
-}
-
-variable "gcp_zone_master_node2" {
   type = string
 }
 
