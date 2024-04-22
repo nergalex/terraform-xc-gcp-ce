@@ -110,3 +110,8 @@ variable "gcp_existing_network_slo" {
   description = "existing gcp network name slo"
   type        = string
 }
+
+variable "gcp_existing_subnet_network_slo" {
+  description = "existing gcp subnetwork name slo"
+  type        = string
+}

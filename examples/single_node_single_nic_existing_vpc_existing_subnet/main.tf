@@ -24,24 +24,8 @@ module "vpc_slo" {
   }
 }
 
-module "vpc_sli" {
-  source       = "terraform-google-modules/network/google"
-  version      = "~> 6.0"
-  project_id   = var.gcp_project_id
-  network_name = "${var.project_prefix}-${var.f5xc_cluster_name}-vpc-sli-${var.gcp_region}-${var.project_suffix}"
-  mtu          = 1460
-  subnets      = [
-    {
-      subnet_name   = "${var.project_prefix}-${var.f5xc_cluster_name}-sli-${var.gcp_region}-${var.project_suffix}"
-      subnet_ip     = "192.168.2.0/24"
-      subnet_region = var.gcp_region
-    }
-  ]
-  delete_default_internet_gateway_routes = true
-}
-
 module "f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_existing_subnet" {
-  depends_on                      = [module.vpc_sli, module.vpc_slo]
+  depends_on                      = [module.vpc_slo]
   source                          = "../../modules/f5xc/ce/gcp"
   owner                           = var.owner
   is_sensitive                    = false
@@ -54,7 +38,7 @@ module "f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_existing_subnet" {
   gcp_instance_image              = var.gcp_instance_image
   gcp_instance_disk_size          = var.gcp_instance_disk_size
   gcp_existing_network_slo = module.vpc_slo.network_name #var.gcp_existing_network_slo
-  gcp_existing_subnet_network_slo = module.vpc_slo.subnets["${var.gcp_region}/${var.project_prefix}-${var.f5xc_cluster_name}-slo-${var.gcp_region}-${var.project_suffix}"]["name"]
+  gcp_existing_subnet_network_slo = module.vpc_slo.subnets["${var.gcp_region}/${var.project_prefix}-${var.f5xc_cluster_name}-slo-${var.gcp_region}-${var.project_suffix}"]["name"] #var.gcp_existing_subnet_network_slo
   f5xc_tenant                     = var.f5xc_tenant
   f5xc_api_url                    = var.f5xc_api_url
   f5xc_namespace                  = var.f5xc_namespace
