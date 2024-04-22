@@ -64,6 +64,12 @@ Description of available input variables. Used input variables will change per t
 | gcp_zone_node1                  | GCP zone for cluster node1                                                                                     |
 | gcp_zone_node2                  | GCP zone for cluster node2                                                                                     |
 | gcp_instance_image              | GCP instance image to use e.g. rhel9-20240216075746-voltstack-combo-us                                         |
+| gcp_zone_master_node0           | GCP zone for AppStack master node0                                                                             |
+| gcp_zone_master_node1           | GCP zone for AppStack master node1                                                                             |
+| gcp_zone_master_node2           | GCP zone for AppStack master node2                                                                             |
+| gcp_zone_worker_node0           | GCP zone for AppStack master node0                                                                             |
+| gcp_zone_worker_node1           | GCP zone for AppStack master node1                                                                             |
+| gcp_zone_worker_node2           | GCP zone for AppStack master node2                                                                             |
 | gcp_existing_network_slo        | GCP existing network name for SLO                                                                              |
 | gcp_existing_network_sli        | GCP existing network name for SLI                                                                              |
 | gcp_existing_subnet_network_slo | GCP existing subnetwork name for SLO                                                                           |
