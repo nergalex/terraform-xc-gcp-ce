@@ -11,10 +11,6 @@ This example instantiates:
 - GCP compute firewall for SLO
 - SLO interface with NAT IP
 
-## Topology
-
-![Single Node Single NIC new VPC new subnet](../../images/aws_1n.png)
-
 # Usage
 
 - Prepare GPC instance image
