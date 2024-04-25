@@ -1,3 +1,6 @@
 [submodule "modules"]
 	path = modules
 	url = https://github.com/f5devcentral/f5-xc-tf-modules
+[submodule "examples/single_node_cluster_appstack_new_vpc_new_subnet/modules"]
+	path = examples/single_node_cluster_appstack_new_vpc_new_subnet/modules
+	url = https://github.com/f5devcentral/f5-xc-tf-modules
