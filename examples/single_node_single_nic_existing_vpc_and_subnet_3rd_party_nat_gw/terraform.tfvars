@@ -1,6 +1,6 @@
-owner                           = "al.dacosta@f5.com"
+owner                           = "gg@gg.com"
 project_prefix                  = "f5xc"
-project_suffix                  = "2"
+project_suffix                  = "1"
 ssh_public_key_file             = "app.pub"
 gcp_zone                        = "a"
 gcp_region                      = "europe-west9"
