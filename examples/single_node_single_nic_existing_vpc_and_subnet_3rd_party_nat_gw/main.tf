@@ -2,11 +2,11 @@ locals {
   custom_tags = {
     Owner         = var.owner
     f5xc-tenant   = var.f5xc_tenant
-    f5xc-template = "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_eip_3rd_party_nat_gw"
+    f5xc-template = "f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw"
   }
 }
 
-module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_eip_3rd_party_nat_gw" {
+module "f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw" {
   source                          = "../../modules/f5xc/ce/gcp"
   owner                           = var.owner
   is_sensitive                    = false
@@ -20,6 +20,8 @@ module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_e
   gcp_instance_disk_size          = var.gcp_instance_disk_size
   gcp_existing_network_slo        = var.gcp_existing_network_slo
   gcp_existing_subnet_network_slo = var.gcp_existing_subnet_network_slo
+  f5xc_cluster_latitude           = var.f5xc_cluster_latitude
+  f5xc_cluster_longitude          = var.f5xc_cluster_longitude
   f5xc_tenant                     = var.f5xc_tenant
   f5xc_api_url                    = var.f5xc_api_url
   f5xc_namespace                  = var.f5xc_namespace
@@ -40,7 +42,6 @@ module "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_e
   }
 }
 
-output "f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_eip_3rd_party_nat_gw" {
-  value = module.f5xc_gcp_cloud_ce_single_node_multi_nic_existing_vpc_and_subnet_slo_no_eip_3rd_party_nat_gw
+output "f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw" {
+  value = module.f5xc_gcp_cloud_ce_single_node_single_nic_existing_vpc_and_subnet_3rd_party_nat_gw
 }
-
